@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:habr_career/ui/screens/home_page.dart';
 import 'package:habr_career/ui/screens/login_page.dart';
+import 'package:habr_career/ui/screens/splash_page.dart';
 import 'package:habr_career/ui/theme/themes.dart';
 
 
@@ -31,11 +32,12 @@ class _AppViewState extends State<AppView> {
       navigatorKey: _navigatorKey,
       theme: AppTheme().lightTheme,
       darkTheme: AppTheme().darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       // home: const LoginPage(),
       initialRoute: '/',
       routes: {
         "/": (context) => const LoginPage(),
+        "/login": (context) => const SplashPage(),
         '/home': (context) => const HomePage()
       },
     );
